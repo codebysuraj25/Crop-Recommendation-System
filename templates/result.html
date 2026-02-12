@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommended Crop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌱 Crop Recommendation Result</h1>
+    <p>This crop is best suitable for your inputs.</p>
+
+    <hr>
+
+    <p><b>Soil Type:</b> {{ soil }}</p>
+    <p><b>Season:</b> {{ season }}</p>
+    <p><b>Rainfall:</b> {{ rainfall }}</p>
+    <p><b>Temperature:</b> {{ temperature }}</p>
+
+    <hr>
+
+    <h2>✅ Recommended Crop:</h2>
+<h1 class="crop">{{ crop }}</h1>
+
+<img src="{{ url_for('static', filename='images/' + crop_image) }}" 
+     alt="Crop Image" class="crop-img">
+
+
+    <a href="/" class="btn">🔄 Check Again</a>
+</div>
+
+</body>
+</html>

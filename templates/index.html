@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌾 Smart Crop Recommendation</h1>
+    <p>Helping farmers choose the best crop based on soil & weather conditions</p>
+
+    <form action="/result" method="POST">
+
+        <label>Soil Type:</label>
+        <select name="soil" required>
+            <option value="Black">Black Soil</option>
+            <option value="Red">Red Soil</option>
+            <option value="Alluvial">Alluvial Soil</option>
+            <option value="Sandy">Sandy Soil</option>
+        </select>
+
+        <label>Season:</label>
+        <select name="season" required>
+            <option value="Kharif">Kharif</option>
+            <option value="Rabi">Rabi</option>
+            <option value="Summer">Summer</option>
+        </select>
+
+        <label>Rainfall Level:</label>
+        <select name="rainfall" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+
+        <label>Temperature Level:</label>
+        <select name="temperature" required>
+            <option value="Low">Low</option>
+            <option value="Normal">Normal</option>
+            <option value="High">High</option>
+        </select>
+
+        <button type="submit">🌱 Recommend Crop</button>
+
+    </form>
+</div>
+
+</body>
+</html>
